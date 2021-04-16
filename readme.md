@@ -4,7 +4,7 @@
 
 ## 独立使用flume作agent时
 
-1. 首先将对应hadoop依赖版本的[hadoop-cos-{hadoop.version}-{cosn.version}.jar](https://github.com/tencentyun/hadoop-cos/releases)和[cos_api-bundle-5.x.x.jar](https://github.com/tencentyun/hadoop-cos/releases)以及定制的flume-hdfs-sink-1.8.0和fastjson的jar包放到flume的lib目录下，保证hadoop-cos能够正确的加载到FLUME_CLASSPATH中；
+1. 首先将对应hadoop依赖版本的[hadoop-cos-{hadoop.version}-{cosn.version}.jar](https://github.com/tencentyun/hadoop-cos/releases)和[cos_api-bundle-5.x.x.jar](https://github.com/tencentyun/hadoop-cos/releases)以及定制的[flume-hdfs-sink-1.8.0](https://github.com/tencentyun/flume-to-cos/releases)和[fastjson](https://github.com/tencentyun/flume-to-cos/releases)的jar包放到flume的lib目录下，保证hadoop-cos能够正确的加载到FLUME_CLASSPATH中；
 
 2. 将hadoop相关的依赖放到flume的lib目录下，保证flume能够正确加载到hadoop的相关依赖；
 
