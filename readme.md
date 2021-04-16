@@ -3,7 +3,7 @@
 以下分为flume独立部署与依赖hadoop环境部署介绍：
 
 ## 独立使用flume作agent时
-[hadoop-cos release](https://github.com/tencentyun/hadoop-cos/releases)
+
 1. 首先将对应hadoop依赖版本的[hadoop-cos-{hadoop.version}-{cosn.version}.jar](https://github.com/tencentyun/hadoop-cos/releases)和[cos_api-bundle-5.x.x.jar](https://github.com/tencentyun/hadoop-cos/releases)以及定制的flume-hdfs-sink-1.8.0和fastjson的jar包放到flume的lib目录下，保证hadoop-cos能够正确的加载到FLUME_CLASSPATH中；
 
 2. 将hadoop相关的依赖放到flume的lib目录下，保证flume能够正确加载到hadoop的相关依赖；
@@ -31,7 +31,7 @@
 
 假设环境中的已有Hadoop运行环境，hadoop的根目录为${HADOOP_HOME}，则按如下步骤进行配置
 
-1.首先，将对应hadoop版本的hadoop-cos的jar包(hadoop-cos-{hadoop.version}-{cosn.version}.jar 和 cos_api-bundle-5.x.x.jar)放置到${HADOOP_HOME}/share/hadoop/tools/lib目录下，同时在${HADOOP_HOME}/hadoop-2.8.5/etc/hadoop/hadoop-env.sh末尾添加以下内容：
+1.首先，将对应hadoop版本的hadoop-cos的jar包([hadoop-cos-{hadoop.version}-{cosn.version}.jar](https://github.com/tencentyun/hadoop-cos/releases)和[cos_api-bundle-5.x.x.jar](https://github.com/tencentyun/hadoop-cos/releases))放置到${HADOOP_HOME}/share/hadoop/tools/lib目录下，同时在${HADOOP_HOME}/hadoop-2.8.5/etc/hadoop/hadoop-env.sh末尾添加以下内容：
 
 ```shell
 for f in $HADOOP_HOME/share/hadoop/tools/lib/*.jar; do
